@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #171f26, #2d3c48, #4d6375);
+    color: white;
+}
+
+#home, #projects, #about, nav, ul, li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    /*background-color: #334453;*/
+    background-color: rgb(25, 25, 25);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+}
+
+.dev-mark {
+    margin: 10px;
+}
+
+.navbar, .navbar ul { /* so apparently there's something off with pseudo selectors and tags like ul, for some reason * universal selector doesn't apply */
+  padding: 0; /*i needed these two lines in order to center everything nicely inside header*/
+  margin: 0;
+}
+.navbar, ul, li {
+    height: 100%;
+}
+
+
+li {
+    list-style: none;
+    width: 120px;
+    transition: background-color 0.5s ease;
+}
+li:hover {
+    background-color: #2d3c48;
+}
+.nav-link {
+    color: white; 
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+
+#home, #projects, #about {
+    height: 100vh;
+    position: relative;
+}
+
+#home {
+    align-items: flex-end;
+}
+#about {
+    flex-direction: column;
+}
+
+.teo {
+}
+
+.home-section {
+    width: 500px;
+    height: 500px;
+}
+
+.about-section {
+    padding-top: 150px;
+    width: 700px;
+    height: 600px;
+    text-align: center;
+}
+
+
+#projects {
+    padding-top: 90px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card, .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  flex: 0 1 calc(33.333% - 1rem); /*i removed width and replaced it with this instead so that each card takes 1/3 - gap of the container space so i end up with two rows, it works because i only have 6 projects*/
+  height: 18rem;
+  overflow: hidden;
+  color: white;
+  background-color: #171f26;
+}
+
+.card-body {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.card-text {
+    padding: 10px;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    text-align: justify;
+    overflow-y: auto;
+    /* Hiden scrollbar in most browsers */
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none;       /* IE & Edge */
+}
+.card-text::-webkit-scrollbar { /* i added this one too just in case */
+  display: none;                  /* Chrome, Safari, and newer Edge */
+}
+
+#contact {
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+    padding: 50px;
+}

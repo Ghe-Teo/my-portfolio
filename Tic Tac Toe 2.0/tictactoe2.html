@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe 2.0</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="tictactoe2.css">
+</head>
+<body>
+
+    <h1 class="current-player"></h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 cell-1"></div>
+             <div class="col-4 cell-2"></div>
+            <div class="col-4 cell-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-4 cell-4"></div>
+            <div class="col-4 cell-5"></div>
+            <div class="col-4 cell-6"></div>
+        </div>
+        <div class="row">
+            <div class="col-4 cell-7"></div>
+            <div class="col-4 cell-8"></div>
+            <div class="col-4 cell-9"></div>
+        </div>
+    </div>
+    
+    <div class="game-info">
+        <p>Games played: <span class="game-count"></span></p>
+        <p>Player X wins: <span class="x-win-count"></span> <span class="x-win-rate"></span></p>
+        <p>Player O wins: <span class="o-win-count"></span> <span class="o-win-rate"></span></p>
+    </div>
+    <button id="play-again" class="btn btn-primary">PLAY AGAIN</button>
+    <button id="reset" class="btn btn-primary">RESET</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="tictactoe2.js"></script>
+</body>
+</html>

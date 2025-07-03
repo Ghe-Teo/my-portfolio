@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="container py-4">
+        <div class="card p-3">
+            <!-- Search Bar -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search Location" aria-label="Search">
+                <button class="btn btn-primary" type="button"><i class="bx bx-search"></i></button>
+            </div>
+    
+            <!-- DAY, Date, Location-->
+            <div class="row">
+                <p class="day text-size text-center mb-2">DAY</p>
+                <p class="date text-size text-center mb-2">Date</p>
+                <p class="location text-center"><span class="text-size"><i class="bx bxs-map"></i> Location</span></p>
+            </div>
+    
+            <hr>
+    
+            <!-- Weather Symbol, Temperature, Weather Condition -->
+            <div class="row">
+                <p class="weather-symbol"><i class="bx bxs-cloud text-size"></i></p>
+                <p class="temperature text-size mb-2">Temperature</p>
+                <p class="weather-condition text-size">Weather Condition</p>
+            </div>
+        </div> 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="weather.js"></script>
+    
+</body>
+</html>

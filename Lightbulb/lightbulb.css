@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #222;
+}
+body, .switch, .light-on, .bulb-container  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*THE BULB:*/
+.bulb-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+.bulb-container img {
+    max-width: 100%;
+    max-height: 100%;
+    user-select: none; /* Prevents selection */
+    pointer-events: none; /* Stops clicks from interacting with the selection behavior */
+    position: absolute;
+    top: 25%;
+}
+
+
+
+/*THE SWITCH:*/
+.switch {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(#efefdd, #b1b1ab, #efefdd);
+    border: 3px solid #605f5f;
+    border-radius: 20%;
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+}
+
+.switch .btn {
+    position: relative;
+    width: 30px;
+    height: 60px;
+    background: linear-gradient(#777, #eee, #777);
+    border: 3px solid #605f5f;
+    border-radius: 20%;
+    cursor: pointer;
+}
+.switch .btn::before {  /*turned off state, the image takes 85% of the button, creating the effect of a shadow*/
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(white, white);
+    border-radius: 20%;
+}
+.on .btn::before {  /*turned on state, we shift the image from the by 15%, the remainder of the switch height, to create the illusion of the shadow moving due to switching the button*/
+    top: 15%; 
+}
+
+
+
+/*GLOWING BULB LIGHT:*/
+@keyframes fadeInGlow { /*fade in effect, starts from low opacity to full*/
+    0% { opacity: 0; } 
+    100% { opacity: 1; }
+}
+.light-on {
+    animation: fadeInGlow 0.3s ease-in forwards;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle,   /* adding "circle" is a good practice to force the gradient spread in a circle and not oval */
+        rgba(255, 255, 0, 1) 0%,  
+        rgba(255, 255, 0, 0.8) 20%, 
+        rgba(255, 255, 0, 0.6) 40%, 
+        rgba(255, 255, 0, 0.4) 60%, 
+        rgba(255, 255, 0, 0.2) 80%, 
+        rgba(255, 255, 0, 0) 100% 
+    );
+    box-shadow: 0 0 100px 200px rgba(255, 255, 0, 0.3);
+    position: absolute;
+}

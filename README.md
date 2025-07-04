@@ -27,4 +27,5 @@ A personal portfolio website to showcase my web development projects, skills, an
 - Email: gherman.teodosian@gmail.com
 - LinkedIn: https://www.linkedin.com/in/gherman-teodosian/
 - GitHub: https://github.com/Ghe-Teo
+- My portfolio Website: https://ghe-teo.github.io/my-portfolio/
 - Phone: +40742805308
